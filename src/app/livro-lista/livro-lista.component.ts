@@ -15,6 +15,7 @@ export class LivroListaComponent implements OnInit {
     { nome: 'HarperCollins', codEditora: 2 },
     { nome: 'Intrínseca', codEditora: 3 }
   ];
+  
 
   livros: Livro[] = [
     {
@@ -55,5 +56,6 @@ export class LivroListaComponent implements OnInit {
     console.log('Excluindo livro')
    this.livros = this.servLivros.remove(this.livros, livro);
   }
+  
   
 }

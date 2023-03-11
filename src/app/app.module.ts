@@ -7,6 +7,7 @@ import { LivroListaComponent } from './livro-lista/livro-lista.component';
 import { LivroDadosComponent } from './livro-dados/livro-dados.component';
 import { ControleEditoraService } from './ControleEditora.service';
 import { ControleLivrosService } from './ControleLivros.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ControleLivrosService } from './ControleLivros.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [ControleEditoraService, ControleLivrosService],
   bootstrap: [AppComponent]
