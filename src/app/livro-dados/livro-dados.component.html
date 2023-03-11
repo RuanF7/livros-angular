@@ -1,1 +1,32 @@
-<p>livro-dados works!</p>
+<main class="container">
+
+  <h1>Dados do Livro</h1>
+  <form #userForm="ngForm" (ngSubmit)="incluir(userForm.value)">
+    <div class="form-group">
+      <label htmlFor="titulo" ngModel>Título</label>
+      <input id="titulo" class="form-control" type="text" ngModel/>
+    </div>
+    <div class="form-group mt-2">
+      <label htmlFor="resumo" ngModel>Resumo</label>
+      <textarea id="resumo" class="form-control" type="textarea" ngModel>
+        
+      </textarea>
+    </div>
+
+    <div class="form-group mt-2">
+      <label htmlFor="editora" ngModel>Editora</label>
+      <select id="editora" class="form-control">        
+            <option *ngFor="let editora of editoras">{{editora.nome}}</option>          
+      </select>
+    </div>
+    <div class="form-group mt-2">
+      <label htmlFor="autores" ngModel>Autores</label>
+      <textarea id="autores" class="form-control" rows={3}></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-2">
+      Salvar dados
+    </button>
+  </form>
+  
+</main>

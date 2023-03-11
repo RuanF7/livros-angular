@@ -6,7 +6,9 @@ import { LivroDadosComponent } from './livro-dados/livro-dados.component';
 
 const routes: Routes = [
   { path: 'lista', component: LivroListaComponent},
-  { path: 'dados', component: LivroDadosComponent}
+  { path: 'dados', component: LivroDadosComponent},
+  { path: '', component: LivroDadosComponent},
+
 ];
 
 @NgModule({
