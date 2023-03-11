@@ -38,7 +38,7 @@ export class LivroListaComponent implements OnInit {
       resumo: 'Percy Jackson é filho de um deus. Ele está para ser expulso do colégio... de novo. Mas, aos doze anos, esse é apenas mais um de seus problemas. Além do transtorno do déficit de atenção e da dislexia, parece que, ultimamente, criaturas fantásticas e deuses do Olimpo saíram dos livros de mitologia grega diretamente para a realidade. E, ao que tudo indica, estão aborrecidos com ele. O raio-mestre de Zeus foi roubado, e é Percy quem deve resgatá-lo. Para restaurar a paz no Olimpo, ele e seus amigos – jovens heróis modernos – precisarão fazer mais que capturar o verdadeiro ladrão: Percy terá de encarar o pai que o abandonou, resolver o enigma do Oráculo e desvendar uma traição mais ameaçadora que a fúria dos deuses.',
       autores: ['Rick Riordan'],
     }
-  ];
+  ];  
 
   livrosDetails = '';
 
