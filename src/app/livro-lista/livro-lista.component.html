@@ -1,1 +1,11 @@
-<p>livro-lista works!</p>
+<main>
+  <title>Catálogo de Livros</title>
+  <table className="table table-dark table-striped">
+    <tr *ng-For="livros">
+      <td>{{livros.t}}</td>
+      <td>{{}}</td>
+      <td>{{}}</td>
+      <td>{{}}</td>
+    </tr>
+  </table>
+</main>
