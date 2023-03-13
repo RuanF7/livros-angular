@@ -15,9 +15,7 @@ export class LivroDadosComponent implements OnInit {
   ListaLivros: any;
   ValorSelecionado: any;
 
-  /*EscolherEditora(e) {
-    this.ValorSelecionado=e.target.value
-  }*/
+  livroModel = new Livro(1, 1, 'Harry', 'john', ['']);
 
   livro: Livro[] = [] ;
 

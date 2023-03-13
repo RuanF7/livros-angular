@@ -2,6 +2,9 @@
 
   <h1>Dados do Livro</h1>
   <form #userForm="ngForm" (ngSubmit)="incluir(userForm.value)">
+    {{ userForm.value | json }}
+    <hr/>
+    {{livroModel | json}}
     <div class="form-group">
       <label htmlFor="titulo" ngModel>Título</label>
       <input id="titulo" class="form-control" type="text" name="titulo" ngModel/>
@@ -15,7 +18,7 @@
     <div class="form-group mt-2">
       <label htmlFor="editora" >Editora</label>
       <select id="editora" class="form-control" name="editora" ngModel>        
-            <option [value]="editora.codEditora" *ngFor="let editora of editoras">{{editora.nome}}</option>          
+            <option *ngFor="let editora of editoras">{{editora.nome}}</option>          
       </select>
     </div>
     <div class="form-group mt-2">
