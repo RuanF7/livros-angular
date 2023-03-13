@@ -41,15 +41,15 @@ export class ControleLivrosService {
     this.livros.push(receberLivro);
   }
 
-  /*excluir(codLivro: number) {
-    const index = this.livros.findIndex((livro) => livro.codigo === codLivro);
+  remove(codLivro: number) {
+    const index = this.livros.findIndex(livro => livro.codigo === codLivro);
     if (index !== -1) {
       this.livros.splice(index, 1);
     }
-  };*/
-  remove(livros: Livro[], livro: Livro) {
+  };
+  /*remove(livros: Livro[], livro: Livro) {
     return livros.filter((a) => livro.codigo !== a.codigo);
-  }
+  }*/
 
   constructor() { }
 }

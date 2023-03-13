@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ControleEditoraService } from '../ControleEditora.service';
-import { ControleLivrosService } from '../ControleLivros.service';
+import { ControleEditoraService } from '../controleeditora.service';
+import { ControleLivrosService } from '../controlelivros.service';
 import { Editora } from '../Editora';
 import { Livro } from '../Livro';
 
@@ -11,6 +11,13 @@ import { Livro } from '../Livro';
   styleUrls: ['./livro-dados.component.css']
 })
 export class LivroDadosComponent implements OnInit {
+
+  ListaLivros: any;
+  ValorSelecionado: any;
+
+  /*EscolherEditora(e) {
+    this.ValorSelecionado=e.target.value
+  }*/
 
   livro: Livro[] = [] ;
 

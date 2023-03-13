@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ControleEditoraService } from '../ControleEditora.service';
-import { ControleLivrosService } from '../ControleLivros.service';
+import { ControleEditoraService } from '../controleeditora.service';
+import { ControleLivrosService } from '../controlelivros.service';
 import { Editora } from '../Editora';
 import { Livro } from '../Livro';
 
@@ -52,10 +52,10 @@ export class LivroListaComponent implements OnInit {
     this.livrosDetails = `${livro.titulo}, ${livro.resumo}, ${livro.codEditora}, ${livro.autores}`;
   }
 
-  removeLivros(livro: Livro) {
+  /*removeLivros(livro: Livro) {
     console.log('Excluindo livro')
    this.livros = this.servLivros.remove(this.livros, livro);
-  }
+  }*/
   
   
 }
