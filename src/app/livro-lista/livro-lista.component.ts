@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ControleEditoraService } from '../controleeditora.service';
-import { ControleLivrosService } from '../controlelivros.service';
+import { ControleEditoraService } from '../controle-editora.service';
+import { ControleLivrosService } from '../controle-livros.service';
 import { Editora } from '../Editora';
 import { Livro } from '../Livro';
 
