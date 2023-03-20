@@ -15,14 +15,14 @@
           <td>
             {{livro.titulo}}
             <br>
-            <button type="button" class="btn btn-danger btn-sm">
+            <button type="button" class="btn btn-danger btn-sm" (click)="excluir(livro.codigo)">
               Excluir
             </button>
 
           </td>
           <td>{{livro.resumo}}</td>
-          <td>{{(livro.codEditora)}}</td>
-          <td><ul><li>{{livro.autores}}</li></ul></td>
+          <td>{{obterNome(livro.codEditora)}}</td>
+          <td><ul><li *ngFor="let autor of livro.autores">{{autor}}</li></ul></td>
         </tr>
       </tbody>
           

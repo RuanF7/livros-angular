@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
 import { Livro } from './Livro';
 
 @Injectable({
@@ -28,28 +29,32 @@ export class ControleLivrosService {
       autores: ['Rick Riordan'],
     }
   ];
-  obterLivros() {
-    return this.livros;
+  obterLivros(): Observable<Livro[]> {
+    return of(this.livros);
   }
 
-  incluir(receberLivro: Livro) {
-    const maiorCod = this.livros.reduce((esteCod, esteLivro) => {
-      return esteCod > esteLivro.codigo ? esteCod : esteLivro.codigo;
-    }, 0);
+  incluir(receberLivro: Livro): void {
+    const maiorCod = this.livros.reduce((esteCod, livros) => 
+      Math.max(esteCod, Number(livros.codigo)),
+     0) + 1;
 
-    receberLivro.codigo = maiorCod + 1;
-    this.livros.push(receberLivro);
+    const adicionarLivro = {
+      codigo: maiorCod,
+      codEditora: Number(receberLivro.codigo),
+      titulo: receberLivro.titulo,
+      resumo: receberLivro.resumo,
+      autores: receberLivro.autores
+    };
+
+    this.livros.push(adicionarLivro);
   }
 
   remove(codLivro: number) {
-    const index = this.livros.findIndex(livro => livro.codigo === codLivro);
+    const index = this.livros.findIndex((livro) => livro.codigo === codLivro);
     if (index !== -1) {
       this.livros.splice(index, 1);
     }
   };
-  /*remove(livros: Livro[], livro: Livro) {
-    return livros.filter((a) => livro.codigo !== a.codigo);
-  }*/
-
+  
   constructor() { }
 }
