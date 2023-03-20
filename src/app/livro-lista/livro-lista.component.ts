@@ -11,10 +11,9 @@ import { Livro } from '../Livro';
   styleUrls: ['./livro-lista.component.css']
 })
 export class LivroListaComponent {
-  editoras: Array<Editora> = [];
-  
+  public editoras: Array<Editora> = [];  
 
-  livros: Array<Livro> = [];   
+  public livros: Array<Livro> = [];   
 
 
   constructor(private servEditora: ControleEditoraService, private servLivros: ControleLivrosService,private router: Router) {}
@@ -38,8 +37,8 @@ export class LivroListaComponent {
   })}
 
   obterNome = (codEditora: number) => {
-    return this.servEditora.getNomeEditora(codEditora).map((nomeEditora) => {
-      return nomeEditora.nome;
+    return this.servEditora.getNomeEditora(codEditora).map((editoraNome) => {
+      return editoraNome.nome;
     })};
 
   }

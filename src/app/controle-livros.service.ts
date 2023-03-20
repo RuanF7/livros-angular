@@ -40,7 +40,7 @@ export class ControleLivrosService {
 
     const adicionarLivro = {
       codigo: maiorCod,
-      codEditora: Number(receberLivro.codigo),
+      codEditora: Number(receberLivro.codEditora),
       titulo: receberLivro.titulo,
       resumo: receberLivro.resumo,
       autores: receberLivro.autores

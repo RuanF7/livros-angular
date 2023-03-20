@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ControleEditoraService } from '../controle-editora.service';
 import { ControleLivrosService } from '../controle-livros.service';
@@ -13,11 +13,11 @@ import { Livro } from '../Livro';
 export class LivroDadosComponent {
 
   
-  livro: Livro = new Livro(0, 0, 'titulo','resumo', ['autores']);
+  public livro: Livro = new Livro(0, 0, 'titulo','resumo', ['autores']);
 
-  autoresForm: string = '';
+  public autoresForm: string = '';
 
-  editoras: Array<Editora> = [];
+  public editoras: Array<Editora> = [];
 
   constructor(private servEditora: ControleEditoraService, private servLivros: ControleLivrosService, private router: Router) { }
 
@@ -29,7 +29,7 @@ export class LivroDadosComponent {
   }
 
 
-  incluir() {
+  incluir = () => {
     this.livro.autores = this.autoresForm.replace(',', '\n').split('\n');
     console.log(this.autoresForm)
     this.servLivros.incluir(this.livro)

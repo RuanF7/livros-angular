@@ -7,6 +7,10 @@ import { Editora } from './Editora';
 })
 export class ControleEditoraService {
 
+  obterEditoras() {
+    throw new Error('Method not implemented.');
+  }
+
   editoras: Editora[] = [
     {     
       codEditora: 1,
@@ -22,7 +26,7 @@ export class ControleEditoraService {
     }
   ];
   getNomeEditora(codigoEditora: number) {
-    return this.editoras.filter((editora) => { return editora.codEditora === codigoEditora })
+    return this.editoras.filter((editoras) => { return editoras.codEditora === codigoEditora });
   }
 
   getEditoras(): Observable<Editora[]> {
