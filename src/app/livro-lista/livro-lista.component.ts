@@ -14,7 +14,7 @@ export class LivroListaComponent {
   editoras: Array<Editora> = [];
   
 
-  livros: Array<Livro> = [];  
+  livros: Array<Livro> = [];   
 
 
   constructor(private servEditora: ControleEditoraService, private servLivros: ControleLivrosService,private router: Router) {}
