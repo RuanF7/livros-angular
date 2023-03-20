@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { Livro } from './Livro';
 
+/*Controle do catálogo de livros, com inclusão de livros e o botão para o método excluir */
+
 @Injectable({
   providedIn: 'root'
 })

@@ -5,6 +5,8 @@ import { ControleLivrosService } from '../controle-livros.service';
 import { Editora } from '../Editora';
 import { Livro } from '../Livro';
 
+/*Componente de criação do catálogo com botão de remover */
+
 @Component({
   selector: 'app-livro-lista',
   templateUrl: './livro-lista.component.html',

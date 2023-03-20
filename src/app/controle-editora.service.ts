@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { Editora } from './Editora';
 
+/*Controle de editoras com recebimento de string pelo nome e tratamento do number para o código */
 @Injectable({
   providedIn: 'root'
 })

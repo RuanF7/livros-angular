@@ -5,6 +5,7 @@ import { ControleLivrosService } from '../controle-livros.service';
 import { Editora } from '../Editora';
 import { Livro } from '../Livro';
 
+/*Componente de criação do formulário com inclusão pelo código das editoras */
 @Component({
   selector: 'app-livro-dados',
   templateUrl: './livro-dados.component.html',
@@ -28,6 +29,7 @@ export class LivroDadosComponent {
     )
   }
 
+  /*Inclusão dos autores no formato <ul> */
 
   incluir = () => {
     this.livro.autores = this.autoresForm.replace(',', '\n').split('\n');

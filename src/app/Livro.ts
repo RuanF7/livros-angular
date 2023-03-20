@@ -1,4 +1,7 @@
 
+/*
+Modelo de livros, com tipos number para codigo e editora, e string para resumo, titulo e autores, sendo autores um array
+*/
 export class Livro {
   
   codigo: number;
